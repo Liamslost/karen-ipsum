@@ -4,7 +4,12 @@
     "target": "ES6",
     "module": "ESNext",
     "lib": ["ES2023", "DOM"],
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["node_modules/*"]
+  },
   },
   "include": [
     "src/**/*.ts",

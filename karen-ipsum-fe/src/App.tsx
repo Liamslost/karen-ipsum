@@ -4,6 +4,8 @@ import DisplayIpsum from "./Components/DisplayIpsum";
 import ParagraphSelector from "./Components/ParagraphSelector";
 import SentenceSelector from "./Components/SentenceSelector";
 import useFetchIpsum from "./Components/UseFetchIpsum";
+import React from 'react';
+
 
 function App() {
   const [moodId, setMoodId] = useState("");
