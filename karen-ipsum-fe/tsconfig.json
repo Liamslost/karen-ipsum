@@ -4,5 +4,10 @@
     "target": "ES6",
     "module": "ESNext",
     "lib": ["ES2023", "DOM"]
-  }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ]
+
 }
