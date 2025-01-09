@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
-    "jsx": "react-jsx",
+    "jsx": "react",
     "target": "ES6",
     "module": "ESNext",
-    "lib": ["ES2023", "DOM"]
+    "lib": ["ES2023", "DOM"],
+    "allowSyntheticDefaultImports": true
   },
   "include": [
     "src/**/*.ts",

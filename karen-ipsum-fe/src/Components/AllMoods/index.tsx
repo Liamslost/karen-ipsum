@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import BASE_URL from "../../settings";
+import React from "react";
 
 interface Moods {
   _id: string;
