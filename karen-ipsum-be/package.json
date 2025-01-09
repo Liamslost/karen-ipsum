@@ -9,6 +9,10 @@
     "build": "tsc",
     "test": "jest"
   },
+
+  "engines": {
+  "node": "22.x"
+},
   "author": "Liam O'Connell",
   "license": "ISC",
   "dependencies": {
