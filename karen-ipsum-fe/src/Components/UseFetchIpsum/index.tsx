@@ -1,5 +1,7 @@
 import { useState } from "react";
 import BASE_URL from "../../settings";
+import React from 'react';
+
 
 function useFetchIpsum() {
   const [ipsum, setIpsum] = useState<string[]>([]);
