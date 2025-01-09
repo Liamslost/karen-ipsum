@@ -1,0 +1,26 @@
+{
+    "files": [
+      "main.ts",
+      "config.ts"
+    ],
+    "include": [
+      "src/**/*.ts",
+      "src/Controllers/getAllMoods/**/*.ts"
+    ],
+    "compilerOptions": {
+      "target": "ES6",
+      "lib": ["ES2023", "DOM"],
+      "checkJs": false,
+      "module": "NodeNext",
+      "esModuleInterop": true,
+      "strict": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true
+    },
+    "scripts": {
+      "build": "tsc --project tsconfig.json",
+      "dev": "tsc --watch --project tsconfig.json",
+      "test": "jest"
+    }
+  }
+  
