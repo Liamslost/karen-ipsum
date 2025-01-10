@@ -8,10 +8,6 @@
     "noEmit": true,
     "allowImportingTsExtensions": true,
     "moduleResolution": "bundler",
-    "baseUrl": ".",
-    "paths": {
-      "*": ["node_modules/*"]
-    },
     "types": [
       "react",
       "react-dom",
