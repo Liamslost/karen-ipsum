@@ -11,7 +11,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.connectToDatabase = connectToDatabase;
 const mongodb_1 = require("mongodb");
-const client = new mongodb_1.MongoClient(process.env.MONGO_URI);
+const mongoURI = process.env.MONGO_URI;
+if (!mongoURI) {
+    console.error("MONGO_URI is not defined in environment variables");
+    process.exit(1);
+}
+const client = new mongodb_1.MongoClient(mongoURI);
 let db;
 function connectToDatabase() {
     return __awaiter(this, void 0, void 0, function* () {
@@ -22,7 +27,7 @@ function connectToDatabase() {
             return db;
         }
         catch (error) {
-            console.error("Failed to connect to MongoDB", error);
+            console.error("Failed to connect to MongoDB:", error.message || error);
             process.exit(1);
         }
     });

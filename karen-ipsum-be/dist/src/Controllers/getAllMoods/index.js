@@ -14,12 +14,12 @@ const databaseConnector_1 = require("../../Services/databaseConnector");
 function getAllMoods(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const db = yield (0, databaseConnector_1.connectToDatabase)(); // Get the db object
-            const moodsCollection = db.collection("karens"); // Access the collection
+            const db = yield (0, databaseConnector_1.connectToDatabase)();
+            const moodsCollection = db.collection("karens");
             const getMoods = yield moodsCollection
                 .find({})
-                .project({ _id: 1, name: "$style" }) // Project the fields
-                .toArray(); // Convert the result to an array
+                .project({ _id: 1, name: "$style" })
+                .toArray();
             console.log("Retrieved Moods:", getMoods);
             res.status(200).json({
                 message: "Successfully retrieved all Karen moods",
