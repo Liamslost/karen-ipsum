@@ -11,11 +11,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getIpsum = getIpsum;
 const mongodb_1 = require("mongodb");
-const databaseConnector_1 = require("../../Services/databaseConnector"); // Import your connector
-function getIpsum(req, res) {
+const databaseConnector_1 = require("../../Services/databaseConnector");
+function getIpsum(req, res, next) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            // Validate the ID parameter
             const id = req.query.id;
             if (typeof id !== "string" || !mongodb_1.ObjectId.isValid(id)) {
                 return res.status(400).json({ message: "Invalid ID" });
@@ -26,17 +25,12 @@ function getIpsum(req, res) {
             const filter = {
                 _id: karenId,
             };
-            // Connect to the database and fetch the document
             const connection = yield (0, databaseConnector_1.connectToDatabase)();
-            const getIpsum = yield connection
-                .collection("karens")
-                .findOne(filter);
-            // Check if the document is found
+            const getIpsum = yield connection.collection("karens").findOne(filter);
             if (!getIpsum) {
                 return res.status(404).json({ message: "Karen not found" });
             }
             const quotes = (getIpsum === null || getIpsum === void 0 ? void 0 : getIpsum.quotes) || [];
-            // Generate random ipsum content
             const result = [];
             for (let i = 0; i < paragraphs; i++) {
                 const paragraph = [];
@@ -44,26 +38,14 @@ function getIpsum(req, res) {
                     const random = Math.floor(Math.random() * quotes.length);
                     paragraph.push(quotes[random] + " ");
                 }
-                result.push(paragraph.join(''));
+                result.push(paragraph.join(""));
             }
-            // Send response with the generated ipsum content
-            res.status(200).json({ message: "Successfully retrieved", data: result });
+            return res
+                .status(200)
+                .json({ message: "Successfully retrieved", data: result });
         }
         catch (error) {
-            if (error instanceof Error) {
-                res.status(500).json({
-                    message: "Unexpected Error",
-                    data: [],
-                    error: error.message,
-                });
-            }
-            else {
-                res.status(500).json({
-                    message: "Unexpected Error",
-                    data: [],
-                    error: "Unknown error",
-                });
-            }
+            next(error);
         }
     });
 }

@@ -4,7 +4,7 @@
   "description": "an ipsum lorem text generator with a nod to internet culture",
   "main": "main.ts",
   "scripts": {
-    "start": "ts-node main.ts",
+    "start": "node dist/index.js",
     "dev": "ts-node-dev src/main.ts",
     "build": "tsc",
     "test": "jest"
