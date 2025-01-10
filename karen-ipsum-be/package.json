@@ -9,14 +9,14 @@
     "build": "tsc",
     "test": "jest"
   },
-
   "engines": {
-  "node": "22.x"
-},
+    "node": ">=20.0.0"
+  },
   "author": "Liam O'Connell",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mongodb": "^6.12.0"
   },
