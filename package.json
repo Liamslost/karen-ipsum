@@ -12,6 +12,10 @@
   },
   "author": "Liam O'Connell",
   "license": "ISC",
+  "engines": {
+    "node": "16.x",
+    "npm": "8.x"
+  },
   "dependencies": {
     "@babel/core": "^7.26.0",
     "@babel/generator": "^7.26.3",
