@@ -5,12 +5,18 @@
     "module": "ESNext",
     "lib": ["ES2023", "DOM"],
     "allowSyntheticDefaultImports": true,
-    "moduleResolution": "node",
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "moduleResolution": "bundler",
     "baseUrl": ".",
     "paths": {
       "*": ["node_modules/*"]
     },
-    "types": ["vite/client"]
+    "types": [
+      "react",
+      "react-dom",
+      "vite/client"
+    ]
   },
   "include": [
     "src/**/*.ts",
