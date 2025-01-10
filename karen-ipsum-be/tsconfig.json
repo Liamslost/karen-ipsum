@@ -11,6 +11,7 @@
     "outDir": "./dist"
   },
   "include": [
+    "./*.ts",
     "src/**/*.ts",
     "src/Controllers/getAllMoods/**/*.ts"
   ],
