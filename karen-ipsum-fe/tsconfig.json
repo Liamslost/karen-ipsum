@@ -5,17 +5,15 @@
     "module": "ESNext",
     "lib": ["ES2023", "DOM"],
     "allowSyntheticDefaultImports": true,
-    "noEmit": true,
-    "allowImportingTsExtensions": true,
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
       "*": ["node_modules/*"]
-  },
+    },
+    "types": ["vite/client"]
   },
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx"
   ]
-
 }
