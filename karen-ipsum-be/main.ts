@@ -17,7 +17,3 @@ app.use(express.json());
 
 app.get("/moods", getAllMoods);
 app.get("/ipsum", getIpsum);
-
-app.listen(PORT, () => {
-  console.log(`Server is running on ${PORT}`);
-});
