@@ -1,5 +1,5 @@
 {
-  "name": "karen-ipsum-be",
+  "name": "karen-ipsum-root",
   "version": "1.0.0",
   "description": "an ipsum lorem text generator with a nod to internet culture",
   "main": "main.ts",
@@ -32,12 +32,9 @@
     "@types/jest": "^29.5.14",
     "@types/react": "^19.0.4",
     "@types/react-dom": "^19.0.2",
+    "@vitejs/plugin-react": "^4.3.4",
     "jest": "^29.7.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.7.3",
-    "vite": "^6.0.7"
-  },
-  "engines": {
-    "node": "22.x"
+    "typescript": "^5.7.3"
   }
 }
