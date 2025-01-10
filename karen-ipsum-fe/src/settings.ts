@@ -1,3 +1,3 @@
-const BASE_URL = 'http://127.0.0.1:3001'
+const BASE_URL = import.meta.env.VITE_BASE_URL;
 
-export default BASE_URL
+export default BASE_URL;
