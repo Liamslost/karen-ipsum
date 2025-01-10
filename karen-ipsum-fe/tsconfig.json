@@ -10,7 +10,7 @@
     "moduleResolution": "bundler",
     "types": [
       "react",
-      "react-dom",
+      "react-dom"
     ]
   },
   "include": [
