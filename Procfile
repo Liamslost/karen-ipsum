@@ -1,1 +1,1 @@
-web: node dist/main.js
+web: --prefix karen-ipsum-be node dist/main.js

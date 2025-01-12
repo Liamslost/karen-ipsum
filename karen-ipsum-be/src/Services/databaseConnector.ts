@@ -1,6 +1,8 @@
 import dotenv from "dotenv";
 import { MongoClient, Db } from "mongodb";
 
+dotenv.config();
+
 const mongoURI = process.env.MONGO_URI;
 if (!mongoURI) {
   console.error("MONGO_URI is not defined in environment variables");

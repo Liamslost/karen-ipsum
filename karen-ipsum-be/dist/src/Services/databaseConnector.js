@@ -8,9 +8,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.connectToDatabase = connectToDatabase;
+const dotenv_1 = __importDefault(require("dotenv"));
 const mongodb_1 = require("mongodb");
+dotenv_1.default.config();
 const mongoURI = process.env.MONGO_URI;
 if (!mongoURI) {
     console.error("MONGO_URI is not defined in environment variables");

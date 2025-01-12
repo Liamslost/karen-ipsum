@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm --prefix karen-ipsum-be run start",
     "build": "npm --prefix karen-ipsum-be run build",
-    "heroku-postbuild": "npm --prefix karen-ipsum-fe install && npm --prefix karen-ipsum-fe run build",
+    "heroku-postbuild": "npm --prefix karen-ipsum-fe install && npm --prefix karen-ipsum-fe run build && npm --prefix karen-ipsum-be install && npm --prefix karen-ipsum-be run build",
     "dev": "npm --prefix karen-ipsum-be run dev",
     "test": "npm --prefix karen-ipsum-be run test"
   },
