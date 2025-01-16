@@ -6,15 +6,17 @@ interface DisplayIpsumProps {
 
 const DisplayIpsum: React.FC<DisplayIpsumProps> = ({ ipsum }) => {
   return (
-    <div>
+    <div className="rounded-lg  grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
       {ipsum.length > 0 ? (
         ipsum.map((paragraph, index) => (
-          <p key={index} className="w-1/4 m-auto mb-6 text-center">
+          <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
+          <p key={index} className="text-gray-600 mb-4" >
             {paragraph}
           </p>
+          </div>
         ))
       ) : (
-        <p className="text-center">Make your selection and click generate.</p>
+        ""
       )}
     </div>
   );

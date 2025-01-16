@@ -16,11 +16,11 @@ console.log('Backend __dirname:', __dirname);
 console.log('Serving frontend from:', path.join(__dirname, '../../karen-ipsum-fe/dist'));
 app.use(express.static(path.join(__dirname, '../../karen-ipsum-fe/dist')));
 
+app.get("/moods", getAllMoods);
+app.get("/ipsum", getIpsum);
 app.get('*', (req, res) => {
 res.sendFile(path.join(__dirname, '../../karen-ipsum-fe/dist', 'index.html'));
 });
-app.get("/moods", getAllMoods);
-app.get("/ipsum", getIpsum);
 
 const PORT = process.env.PORT || 3001;
 
