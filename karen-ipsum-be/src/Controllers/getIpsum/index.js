@@ -22,7 +22,7 @@ function getIpsum(req, res) {
             }
             const karenId = new mongodb_1.ObjectId(id);
             const sentences = Number(req.query.sentences) || 5;
-            const parragraphs = Number(req.query.parragraphs) || 1;
+            const paragraphs = Number(req.query.paragraphs) || 1;
             const filter = {
                 _id: karenId,
             };
@@ -37,13 +37,13 @@ function getIpsum(req, res) {
             }
             const quotes = (getIpsum === null || getIpsum === void 0 ? void 0 : getIpsum.quotes) || [];
             const result = [];
-            for (let i = 0; i < parragraphs; i++) {
-                const parragraph = [];
+            for (let i = 0; i < paragraphs; i++) {
+                const paragraph = [];
                 for (let j = 0; j < sentences; j++) {
                     const random = Math.floor(Math.random() * quotes.length);
-                    parragraph.push(quotes[random] + " ");
+                    paragraph.push(quotes[random] + " ");
                 }
-                result.push(parragraph);
+                result.push(paragraph);
             }
             res.status(200).json({ message: "Successfully retrieved", data: result });
         }

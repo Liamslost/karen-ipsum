@@ -90,11 +90,11 @@ This endpoint generates "Karen Ipsum" text based on the specified mood (by ID). 
 |----------------|----------|----------|-----------------------------------------------------------------------------|
 | `id`           | `string` | Yes      | The unique ID of the Karen mood in the database. Must be a valid MongoDB ID.|
 | `sentences`    | `number` | No       | The number of sentences per paragraph. Defaults to `5`.                     |
-| `parragraphs`  | `number` | No       | The number of paragraphs to generate. Defaults to `1`.                      |
+| `paragraphs`  | `number` | No       | The number of paragraphs to generate. Defaults to `1`.                      |
 
 **Example Request URL:**
 ```
-/ipsum?id=64b5f0123a4f5c6d7e8f9012&sentences=3&parragraphs=2
+/ipsum?id=64b5f0123a4f5c6d7e8f9012&sentences=3&paragraphs=2
 ```
 
 #### **Response**
