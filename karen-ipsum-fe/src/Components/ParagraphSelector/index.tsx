@@ -20,7 +20,7 @@ const ParagraphSelector: React.FC<ParagraphSelectorProps> = ({
       >
         {[1, 2, 3, 4, 5].map((num) => (
           <option key={num} value={num}>
-            {num} {num > 1 ? "Sentences" : "Sentence"}
+            {num} {num > 1 ? "Paragraphs" : "Paragraph"}
           </option>
         ))}
       </select>
