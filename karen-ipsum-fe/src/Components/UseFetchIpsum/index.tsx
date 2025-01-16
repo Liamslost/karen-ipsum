@@ -17,7 +17,7 @@ function useFetchIpsum() {
     setError(null);
     try {
       const response = await fetch(
-        `${BASE_URL}/ipsum/?id=${moodId}&sentences=${sentences}&parragraphs=${paragraphs}`
+        `${BASE_URL}/ipsum/?id=${moodId}&sentences=${sentences}&paragraphs=${paragraphs}`
       );
       const data = await response.json();
       setIpsum(data.data || []);
