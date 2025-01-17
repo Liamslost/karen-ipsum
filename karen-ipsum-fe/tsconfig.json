@@ -2,20 +2,21 @@
   "compilerOptions": {
     "jsx": "react",
     "target": "ES6",
-    "module": "ESNext",
-    "lib": ["ES2023", "DOM"],
+    "module": "Node16",
+    "lib": ["ES2020", "DOM"],
     "allowSyntheticDefaultImports": true,
-    "noEmit": true,
-    "allowImportingTsExtensions": true,
-    "moduleResolution": "bundler",
+    "moduleResolution": "Node16",
+    "skipLibCheck": true,
     "types": [
       "react",
       "react-dom",
-      "vite/client"
+      "vite/client",
+      "@stripe/stripe-js"
     ]
   },
   "include": [
     "src/**/*.ts",
-    "src/**/*.tsx"
+    "src/**/*.tsx",
+    "src/settings.js"
   ]
 }

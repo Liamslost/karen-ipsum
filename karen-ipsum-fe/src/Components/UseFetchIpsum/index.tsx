@@ -1,5 +1,5 @@
 import { useState } from "react";
-import BASE_URL from "../../settings";
+import BASE_URL from "../../settings.js";
 import React from 'react';
 
 

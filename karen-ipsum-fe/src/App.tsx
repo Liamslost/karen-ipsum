@@ -1,9 +1,9 @@
-import { AllMoods } from "./Components/AllMoods";
+import { AllMoods } from "./Components/AllMoods/index.js";
 import { useState } from "react";
-import DisplayIpsum from "./Components/DisplayIpsum";
-import ParagraphSelector from "./Components/ParagraphSelector";
-import SentenceSelector from "./Components/SentenceSelector";
-import useFetchIpsum from "./Components/UseFetchIpsum";
+import DisplayIpsum from "./Components/DisplayIpsum/index.js";
+import ParagraphSelector from "./Components/ParagraphSelector/index.js";
+import SentenceSelector from "./Components/SentenceSelector/index.js";
+import useFetchIpsum from "./Components/UseFetchIpsum/index.js";
 import React from "react";
 import {
   MessageSquare,
@@ -15,7 +15,7 @@ import {
   AlertTriangle,
   Sparkles,
 } from "lucide-react";
-import ContactModal from "./Components/ContactModal";
+import ContactModal from "./Components/ContactModal/ContactModal.js";
 
 function App() {
   const [moodId, setMoodId] = useState("");
