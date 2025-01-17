@@ -11,6 +11,7 @@
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
+    "@formspree/react": "^2.5.1",
     "@types/react": "^19.0.4",
     "@types/react-dom": "^19.0.2",
     "csstype": "^3.1.3",
