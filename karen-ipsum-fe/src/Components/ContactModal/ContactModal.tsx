@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import { Star, X, AlertTriangle } from "lucide-react";
+import {FORM_API} from "../../settings.js"
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -8,7 +9,7 @@ interface ContactModalProps {
 }
 
 function ContactModal({ isOpen, onClose }: ContactModalProps) {
-  const [state, handleSubmit] = useForm("meoowlod");
+  const [state, handleSubmit] = useForm(FORM_API);
 
   if (!isOpen) return null;
 
